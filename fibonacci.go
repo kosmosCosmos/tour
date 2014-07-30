@@ -5,15 +5,12 @@ import "fmt"
 // fibonacci is a function that returns
 // a function that returns an int.
 func fibonacci() func() int {
-	firstFibonacciIndex := 0
-	secondFibonacciIndex := 1
+	firstFibonacciIndex, secondFibonacciIndex := 0, 1
 
 	fiboFunc := func() int {
-		returnValue := firstFibonacciIndex + secondFibonacciIndex
-		firstFibonacciIndex = secondFibonacciIndex
-		secondFibonacciIndex = returnValue
+		firstFibonacciIndex, secondFibonacciIndex = secondFibonacciIndex, firstFibonacciIndex+secondFibonacciIndex
 
-		return returnValue
+		return secondFibonacciIndex
 	}
 
 	return fiboFunc
