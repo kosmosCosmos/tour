@@ -3,7 +3,6 @@ package main
 import "code.google.com/p/go-tour/pic"
 
 // Implement Pic.
-//
 // It should return a slice of length dy, each element of which
 // is a slice of dx 8-bit unsigned integers.
 // When you run the program, it will display your picture,
