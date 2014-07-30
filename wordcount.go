@@ -15,7 +15,7 @@ func WordCount(s string) map[string]int {
 	arrayOfWords := strings.Fields(s)
 
 	for _, word := range arrayOfWords {
-		wordCountMap[word] = wordCountMap[word] + 1
+		wordCountMap[word]++
 	}
 
 	return wordCountMap
